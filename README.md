@@ -40,7 +40,7 @@ fn main() {
     let schema = schema_builder.build();
     let index = Index::create_in_ram(schema.clone());
 
-    // Create an instance of the Stemmer tokenizer
+    // Create an instance of the Stemmer
 
     // With default algorithm (default algorithm is EnglishPorter)
     // let stemmer = tantivy_stemmers::Stemmer::default();
@@ -50,14 +50,14 @@ fn main() {
         tantivy_stemmers::Algorithm::CzechDolamicAggressive,
     );
 
-    // Before we register it, we need to wrap in an instance
+    // Before we register it, we need to wrap it in an instance
     // of the TextAnalyzer tokenizer. We also have to transform
     // the text to lowercase since our stemmer expects lowercase.
     let tokenizer = TextAnalyzer::builder(
         stemmer.transform(LowerCaser.transform(SimpleTokenizer::default())),
     ).build();
 
-    // Register the tokenizer with Tantivy
+    // Register our tokenizer with Tantivy under a custom name
     index.tokenizers().register("lang_cs", tokenizer);
 }
 ```
