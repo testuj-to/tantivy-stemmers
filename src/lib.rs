@@ -12,6 +12,7 @@ pub enum Algorithm {
     CzechDolamicAggressive,
     CzechDolamicLight,
     EnglishPorter,
+    French,
 }
 
 impl Algorithm {
@@ -22,6 +23,7 @@ impl Algorithm {
             CzechDolamicAggressive => snowball::Algorithm::CzechDolamicAggressive,
             CzechDolamicLight => snowball::Algorithm::CzechDolamicLight,
             EnglishPorter => snowball::Algorithm::EnglishPorter,
+            French => snowball::Algorithm::French,
         }
     }
 }
