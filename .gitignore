@@ -1,0 +1,13 @@
+
+tmp/
+
+# Rust specific
+
+debug/
+target/
+
+Cargo.lock
+
+**/*.rs.bk
+
+*.pdb

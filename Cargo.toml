@@ -1,0 +1,19 @@
+[package]
+name = "tantivy-stemmers"
+version = "0.1.0"
+edition = "2021"
+keywords = ["tantivy", "tokenizer", "stemmer"]
+categories = ["text-processing"]
+license = "BSD-3-Clause"
+license-file = "LICENSE"
+authors = ["Testuj.to s.r.o. <technology@testuj.to>", "Patrik Šimunič"]
+description = "A collection of Tantivy stemmer tokenizers"
+repository = "https://github.com/testuj-to/tantivy-stemmers"
+
+[dependencies]
+serde = "1.0.199"
+serde_derive = "1.0.199"
+tantivy-tokenizer-api = "0.3.0"
+
+[dev-dependencies]
+tantivy = "0.22.0"
