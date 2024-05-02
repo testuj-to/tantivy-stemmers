@@ -11,6 +11,7 @@ pub enum Algorithm {
     CzechDolamicAggressive,
     CzechDolamicLight,
     EnglishPorter,
+    French,
 }
 
 /// Wrapps a usable interface around the actual stemmer implementation
@@ -25,6 +26,7 @@ impl Stemmer {
             Algorithm::CzechDolamicAggressive => Stemmer { stemmer: algorithms::czech_dolamic_aggressive::stem },
             Algorithm::CzechDolamicLight => Stemmer { stemmer: algorithms::czech_dolamic_light::stem },
             Algorithm::EnglishPorter => Stemmer { stemmer: algorithms::english_porter::stem },
+            Algorithm::French => Stemmer { stemmer: algorithms::french::stem },
         }
     }
 
