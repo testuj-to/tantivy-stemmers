@@ -22,6 +22,7 @@ pub enum Algorithm {
     NorwegianBokmal,
     Portuguese,
     Romanian,
+    Russian,
     Spanish,
     Swedish,
 }
@@ -44,6 +45,7 @@ impl Algorithm {
             NorwegianBokmal => snowball::Algorithm::NorwegianBokmal,
             Portuguese => snowball::Algorithm::Portuguese,
             Romanian => snowball::Algorithm::Romanian,
+            Russian => snowball::Algorithm::Russian,
             Spanish => snowball::Algorithm::Spanish,
             Swedish => snowball::Algorithm::Swedish,
         }
