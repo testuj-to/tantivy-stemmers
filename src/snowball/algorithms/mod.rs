@@ -11,5 +11,6 @@ pub mod italian;
 pub mod norwegian_bokmal;
 pub mod portuguese;
 pub mod romanian;
+pub mod russian;
 pub mod spanish;
 pub mod swedish;
