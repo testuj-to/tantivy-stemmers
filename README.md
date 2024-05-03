@@ -81,3 +81,7 @@ fn main() {
 - **French**
 
   The French Snowball algorithm was obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/french/stemmer.html).
+
+- **German**
+
+  The German Snowball algorithm was obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/german/stemmer.html).
