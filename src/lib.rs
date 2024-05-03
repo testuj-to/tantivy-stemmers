@@ -9,6 +9,7 @@ mod snowball;
 #[derive(Debug, Serialize, Deserialize, Eq, PartialEq, Copy, Clone)]
 #[allow(missing_docs)]
 pub enum Algorithm {
+    Catalan,
     CzechDolamicAggressive,
     CzechDolamicLight,
     EnglishPorter,
@@ -23,6 +24,7 @@ impl Algorithm {
         use self::Algorithm::*;
 
         match self {
+            Catalan => snowball::Algorithm::Catalan,
             CzechDolamicAggressive => snowball::Algorithm::CzechDolamicAggressive,
             CzechDolamicLight => snowball::Algorithm::CzechDolamicLight,
             EnglishPorter => snowball::Algorithm::EnglishPorter,

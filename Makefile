@@ -21,6 +21,7 @@ algorithms:
 	rm -rf ./src/snowball/algorithms
 	mkdir ./src/snowball/algorithms
 
+	$(call compile_algorithm,catalan)
 	$(call compile_algorithm,czech_dolamic_aggressive)
 	$(call compile_algorithm,czech_dolamic_light)
 	$(call compile_algorithm,english_porter)

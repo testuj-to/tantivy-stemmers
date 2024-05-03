@@ -8,6 +8,7 @@ pub mod algorithms;
 
 #[derive(Debug, Serialize, Deserialize, Eq, PartialEq, Copy, Clone)]
 pub enum Algorithm {
+    Catalan,
     CzechDolamicAggressive,
     CzechDolamicLight,
     EnglishPorter,
@@ -26,6 +27,7 @@ impl Stemmer {
     /// Create a new stemmer from an algorithm
     pub fn create(lang: Algorithm) -> Self {
         match lang {
+            Algorithm::Catalan => Stemmer { stemmer: algorithms::catalan::stem },
             Algorithm::CzechDolamicAggressive => Stemmer { stemmer: algorithms::czech_dolamic_aggressive::stem },
             Algorithm::CzechDolamicLight => Stemmer { stemmer: algorithms::czech_dolamic_light::stem },
             Algorithm::EnglishPorter => Stemmer { stemmer: algorithms::english_porter::stem },
