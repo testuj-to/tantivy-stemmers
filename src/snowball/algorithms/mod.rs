@@ -1,3 +1,4 @@
+pub mod basque;
 pub mod catalan;
 pub mod czech_dolamic_aggressive;
 pub mod czech_dolamic_light;
