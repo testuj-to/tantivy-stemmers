@@ -17,6 +17,7 @@ pub enum Algorithm {
     German,
     Italian,
     Portuguese,
+    Romanian,
     Spanish,
 }
 
@@ -38,6 +39,7 @@ impl Stemmer {
             Algorithm::German => Stemmer { stemmer: algorithms::german::stem },
             Algorithm::Italian => Stemmer { stemmer: algorithms::italian::stem },
             Algorithm::Portuguese => Stemmer { stemmer: algorithms::portuguese::stem },
+            Algorithm::Romanian => Stemmer { stemmer: algorithms::romanian::stem },
             Algorithm::Spanish => Stemmer { stemmer: algorithms::spanish::stem },
         }
     }
