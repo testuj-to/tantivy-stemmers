@@ -28,6 +28,7 @@ algorithms:
 	$(call compile_algorithm,dutch)
 	$(call compile_algorithm,english_porter)
 	$(call compile_algorithm,english_porter_2)
+	$(call compile_algorithm,finnish)
 	$(call compile_algorithm,french)
 	$(call compile_algorithm,german)
 	$(call compile_algorithm,italian)
