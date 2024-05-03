@@ -21,6 +21,7 @@ pub enum Algorithm {
     NorwegianBokmal,
     Portuguese,
     Romanian,
+    Russian,
     Spanish,
     Swedish,
 }
@@ -47,6 +48,7 @@ impl Stemmer {
             Algorithm::NorwegianBokmal => Stemmer { stemmer: algorithms::norwegian_bokmal::stem },
             Algorithm::Portuguese => Stemmer { stemmer: algorithms::portuguese::stem },
             Algorithm::Romanian => Stemmer { stemmer: algorithms::romanian::stem },
+            Algorithm::Russian => Stemmer { stemmer: algorithms::russian::stem },
             Algorithm::Spanish => Stemmer { stemmer: algorithms::spanish::stem },
             Algorithm::Swedish => Stemmer { stemmer: algorithms::swedish::stem },
         }

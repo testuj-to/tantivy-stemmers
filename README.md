@@ -62,7 +62,7 @@ fn main() {
 }
 ```
 
-## Algorithms
+## Supported algorithms
 
 - **Catalan**
 
@@ -113,6 +113,10 @@ fn main() {
 - **Romanian**
 
   The Romanian Snowball algorithm was obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/romanian/stemmer.html).
+
+- **Russian**
+
+  The Russian Snowball algorithm was obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/russian/stemmer.html).
 
 - **Spanish**
 
