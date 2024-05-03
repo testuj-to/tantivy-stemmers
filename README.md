@@ -92,7 +92,7 @@ fn main() {
 
 - **English**
 
-  Two english algorithms in Snowball are available from the official Snowball website - the Porter and Porter 2, both created by Dr. Martin Porter. **The Porter algorithm (original) is used as a default algorithm in this library.** If you wish, you can specify to use the newer Porter 2 algorithm (`Algorithm::EnglishPorter2`).
+  Three english algorithms in Snowball are available from the official Snowball website - the Porter, Porter 2 and Lovins. (At least) the first two algorithms have been developed by Dr. Martin Porter. **The Porter algorithm (original) is used as a default algorithm in this library.** If you wish, you can specify to use the newer Porter 2 algorithm (`Algorithm::EnglishPorter2`) or the Lovins algorithm (`Algorithm::EnglishLovins`).
 
 - **Finnish**
 
