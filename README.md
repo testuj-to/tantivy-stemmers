@@ -90,6 +90,10 @@ fn main() {
 
   The German Snowball algorithm was obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/german/stemmer.html).
 
+- **Italian**
+
+  The Italian Snowball algorithm was obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/italian/stemmer.html).
+
 - **Portuguese**
 
   The Portuguese Snowball algorithm was obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/portuguese/stemmer.html).
