@@ -5,6 +5,7 @@ pub mod danish;
 pub mod dutch;
 pub mod english_porter;
 pub mod english_porter_2;
+pub mod finnish;
 pub mod french;
 pub mod german;
 pub mod italian;

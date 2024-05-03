@@ -90,6 +90,10 @@ fn main() {
 
   Two english algorithms in Snowball are available from the official Snowball website - the Porter and Porter 2, both created by Dr. Martin Porter. **The Porter algorithm (original) is used as a default algorithm in this library.** If you wish, you can specify to use the newer Porter 2 algorithm (`Algorithm::EnglishPorter2`).
 
+- **Finnish**
+
+  The Finnish Snowball algorithm was obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/finnish/stemmer.html).
+
 - **French**
 
   The French Snowball algorithm was obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/french/stemmer.html).
