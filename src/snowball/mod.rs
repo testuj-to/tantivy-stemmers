@@ -11,6 +11,7 @@ pub enum Algorithm {
     CzechDolamicAggressive,
     CzechDolamicLight,
     EnglishPorter,
+    EnglishPorter2,
     French,
     German,
 }
@@ -27,6 +28,7 @@ impl Stemmer {
             Algorithm::CzechDolamicAggressive => Stemmer { stemmer: algorithms::czech_dolamic_aggressive::stem },
             Algorithm::CzechDolamicLight => Stemmer { stemmer: algorithms::czech_dolamic_light::stem },
             Algorithm::EnglishPorter => Stemmer { stemmer: algorithms::english_porter::stem },
+            Algorithm::EnglishPorter2 => Stemmer { stemmer: algorithms::english_porter_2::stem },
             Algorithm::French => Stemmer { stemmer: algorithms::french::stem },
             Algorithm::German => Stemmer { stemmer: algorithms::german::stem },
         }
