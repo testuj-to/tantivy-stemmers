@@ -98,6 +98,10 @@ fn main() {
 
   The Portuguese Snowball algorithm was obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/portuguese/stemmer.html).
 
+- **Romanian**
+
+  The Romanian Snowball algorithm was obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/romanian/stemmer.html).
+
 - **Spanish**
 
   The Spanish Snowball algorithm was obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/spanish/stemmer.html).
