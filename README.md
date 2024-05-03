@@ -124,7 +124,11 @@ fn main() {
 
 - **Romanian**
 
-  The Romanian Snowball algorithm was obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/romanian/stemmer.html).
+  Three Snowball algorithms for the Romainian language are available: `Romanian`, `RomanianHeidelberg` and `RomanianTirdea`. All algorithm were obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/romanian/stemmer.html) and [Snowball website](https://snowballstem.org/otherapps/romanian/).
+
+  The `RomanianHeidelberg` algorithm has been developed in 2006 by **Marina Stegarescu**, **Doina Gliga** and **Erwin Glockner** at the Ruprecht-Karls-University of Heidelberg (Department of Computational Linguistics).
+
+  The `RomanianTirdea` has been developed in 2006 by **Irina Tirdea**.
 
 - **Russian**
 
