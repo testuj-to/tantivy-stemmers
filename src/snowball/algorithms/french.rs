@@ -187,9 +187,9 @@ static G_keep_with_s: &'static [u8; 17] = &[1, 65, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 #[derive(Clone)]
 struct Context {
-    i_p2: usize,
-    i_p1: usize,
-    i_pV: usize,
+    i_p2: i32,
+    i_p1: i32,
+    i_pV: i32,
 }
 
 fn r_prelude(env: &mut SnowballEnv, context: &mut Context) -> bool {

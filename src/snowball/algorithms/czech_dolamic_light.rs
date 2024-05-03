@@ -223,8 +223,8 @@ static G_v: &'static [u8; 34] = &[17, 65, 16, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 #[derive(Clone)]
 struct Context {
-    i_p1: usize,
-    i_pV: usize,
+    i_p1: i32,
+    i_pV: i32,
 }
 
 fn r_mark_regions(env: &mut SnowballEnv, context: &mut Context) -> bool {

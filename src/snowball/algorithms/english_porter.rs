@@ -99,8 +99,8 @@ static G_v_WXY: &'static [u8; 5] = &[1, 17, 65, 208, 1];
 #[derive(Clone)]
 struct Context {
     b_Y_found: bool,
-    i_p2: usize,
-    i_p1: usize,
+    i_p2: i32,
+    i_p1: i32,
 }
 
 fn r_shortv(env: &mut SnowballEnv, context: &mut Context) -> bool {
