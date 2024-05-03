@@ -10,3 +10,4 @@ pub mod italian;
 pub mod portuguese;
 pub mod romanian;
 pub mod spanish;
+pub mod swedish;

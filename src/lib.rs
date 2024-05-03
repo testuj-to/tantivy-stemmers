@@ -21,6 +21,7 @@ pub enum Algorithm {
     Portuguese,
     Romanian,
     Spanish,
+    Swedish,
 }
 
 impl Algorithm {
@@ -40,6 +41,7 @@ impl Algorithm {
             Portuguese => snowball::Algorithm::Portuguese,
             Romanian => snowball::Algorithm::Romanian,
             Spanish => snowball::Algorithm::Spanish,
+            Swedish => snowball::Algorithm::Swedish,
         }
     }
 }
