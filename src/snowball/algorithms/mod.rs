@@ -1,6 +1,7 @@
 pub mod catalan;
 pub mod czech_dolamic_aggressive;
 pub mod czech_dolamic_light;
+pub mod dutch;
 pub mod english_porter;
 pub mod english_porter_2;
 pub mod french;
