@@ -106,6 +106,10 @@ fn main() {
 
   The German Snowball algorithm was obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/german/stemmer.html).
 
+- **Hungarian**
+
+  The Hungarian Snowball algorithm was obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/hungarian/stemmer.html).
+
 - **Irish (Gaelic)**
 
   The Irish (Gaelic) Snowball algorithm was obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/irish/stemmer.html).
