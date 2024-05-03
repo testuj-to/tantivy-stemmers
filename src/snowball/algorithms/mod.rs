@@ -10,6 +10,7 @@ pub mod english_porter_2;
 pub mod finnish;
 pub mod french;
 pub mod german;
+pub mod irish_gaelic;
 pub mod italian;
 pub mod norwegian_bokmal;
 pub mod portuguese;
