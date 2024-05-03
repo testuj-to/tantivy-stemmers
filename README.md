@@ -109,3 +109,7 @@ fn main() {
 - **Spanish**
 
   The Spanish Snowball algorithm was obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/spanish/stemmer.html).
+
+- **Swedish**
+
+  The Swedish Snowball algorithm was obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/swedish/stemmer.html).
