@@ -14,6 +14,7 @@ pub enum Algorithm {
     EnglishPorter2,
     French,
     German,
+    Spanish,
 }
 
 /// Wrapps a usable interface around the actual stemmer implementation
@@ -31,6 +32,7 @@ impl Stemmer {
             Algorithm::EnglishPorter2 => Stemmer { stemmer: algorithms::english_porter_2::stem },
             Algorithm::French => Stemmer { stemmer: algorithms::french::stem },
             Algorithm::German => Stemmer { stemmer: algorithms::german::stem },
+            Algorithm::Spanish => Stemmer { stemmer: algorithms::spanish::stem },
         }
     }
 
