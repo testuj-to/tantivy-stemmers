@@ -12,6 +12,7 @@ pub enum Algorithm {
     CzechDolamicAggressive,
     CzechDolamicLight,
     EnglishPorter,
+    EnglishPorter2,
     French,
     German,
 }
@@ -24,13 +25,15 @@ impl Algorithm {
             CzechDolamicAggressive => snowball::Algorithm::CzechDolamicAggressive,
             CzechDolamicLight => snowball::Algorithm::CzechDolamicLight,
             EnglishPorter => snowball::Algorithm::EnglishPorter,
+            EnglishPorter2 => snowball::Algorithm::EnglishPorter2,
             French => snowball::Algorithm::French,
             German => snowball::Algorithm::German,
         }
     }
 }
 
-/// `Stemmer` token filter for the Czech language, see [`Algorithm`] for the available Algorithms.
+/// `Stemmer` token filter. Several languages are supported, see [`Language`] for the available
+/// languages.
 /// Tokens are expected to be lowercased beforehand.
 #[derive(Clone)]
 pub struct Stemmer {

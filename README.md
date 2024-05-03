@@ -76,7 +76,7 @@ fn main() {
 
 - **English**
 
-  Two english algorithms in Snowball are available from the official Snowball website - the Porter and Porter 2, both created by Dr. Martin Porter. The Porter algorithm (original) is used as a default algorithm in this library. Snowball source code for the Porter 2 algorithm is included in this repository, however, the Rust Snowball environment copied from `rust-stemmers` does implement all necessary functions. As this is not an issue we will likely be addressing soon, **the Porter 2 algorithm is not available in this library and likely won't be anytime soon. Any PRs are of course welcomed!**
+  Two english algorithms in Snowball are available from the official Snowball website - the Porter and Porter 2, both created by Dr. Martin Porter. **The Porter algorithm (original) is used as a default algorithm in this library.** If you wish, you can specify to use the newer Porter 2 algorithm (`Algorithm::EnglishPorter2`).
 
 - **French**
 
