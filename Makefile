@@ -37,6 +37,7 @@ algorithms:
 	$(call compile_algorithm,italian)
 	$(call compile_algorithm,norwegian_bokmal)
 	$(call compile_algorithm,portuguese)
+	$(call compile_algorithm,romanian_heidelberg)
 	$(call compile_algorithm,romanian)
 	$(call compile_algorithm,russian)
 	$(call compile_algorithm,spanish)

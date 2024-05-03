@@ -14,6 +14,7 @@ pub mod irish_gaelic;
 pub mod italian;
 pub mod norwegian_bokmal;
 pub mod portuguese;
+pub mod romanian_heidelberg;
 pub mod romanian;
 pub mod russian;
 pub mod spanish;
