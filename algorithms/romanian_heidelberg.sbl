@@ -12,8 +12,8 @@
  *
  * Romanian (Heidelberg) language stemmer
  *
- * Source obtained from https://snowballstem.org/otherapps/romanian/,
- * under the BSD public license, created by Marina Stegarescu, Doina Gliga and Erwin Glockner.
+ * Source obtained from https://snowballstem.org/otherapps/romanian/, under the BSD
+ * public license, created by Marina Stegarescu, Doina Gliga and Erwin Glockner in 2006.
  */
 
 routines (
