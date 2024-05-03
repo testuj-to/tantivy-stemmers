@@ -33,3 +33,4 @@ algorithms:
 	$(call compile_algorithm,portuguese)
 	$(call compile_algorithm,romanian)
 	$(call compile_algorithm,spanish)
+	$(call compile_algorithm,swedish)
