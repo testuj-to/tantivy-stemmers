@@ -64,6 +64,10 @@ fn main() {
 
 ## Algorithms
 
+- **Catalan**
+
+  The Catalan Snowball algorithm was obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/catalan/stemmer.html).
+
 - **Czech**
 
   Currently only a single algorithm (in an `aggressive` and `light` variants) is available: `Dolamic`. This algorithm has been developed by **Ljiljana Dolamic** & Jacques Savoy and published under the BSD license. It's written in the [Snowball language](https://snowballstem.org/) and is available on the [Snowball website](https://snowballstem.org/algorithms/czech/stemmer.html).
