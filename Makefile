@@ -27,6 +27,7 @@ algorithms:
 	$(call compile_algorithm,czech_dolamic_light)
 	$(call compile_algorithm,danish)
 	$(call compile_algorithm,dutch)
+	$(call compile_algorithm,english_lovins)
 	$(call compile_algorithm,english_porter)
 	$(call compile_algorithm,english_porter_2)
 	$(call compile_algorithm,finnish)
