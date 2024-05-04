@@ -1,3 +1,4 @@
+pub mod arabic;
 pub mod armenian_mkrtchyan;
 pub mod basque;
 pub mod catalan;

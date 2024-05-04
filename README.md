@@ -64,6 +64,10 @@ fn main() {
 
 ## Supported algorithms
 
+- **Arabic**
+
+  The Arabic Snowball algorithm was developed by **Assem Chelli** and **Abdelkrim Aries**. Its source code has been obtained under the BSD license from the official [Snowball GitHub repository](https://github.com/snowballstem/snowball/blob/master/algorithms/arabic.sbl).
+
 - **Armenian**
 
   The Armenian Snowball algorithm was developed by **Astghik Mkrtchyan** and source code has been obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/armenian/stemmer.html).
@@ -96,7 +100,7 @@ fn main() {
 
 - **English**
 
-  Three english algorithms in Snowball are available from the official Snowball website - the Porter, Porter 2 and Lovins. (At least) the first two algorithms have been developed by Dr. Martin Porter. **The Porter algorithm (original) is used as a default algorithm in this library.** If you wish, you can specify to use the newer Porter 2 algorithm (`Algorithm::EnglishPorter2`) or the Lovins algorithm (`Algorithm::EnglishLovins`).
+  Three english algorithms in Snowball are available from the official Snowball website - the Porter, Porter 2 and Lovins. (At least) the first two algorithms have been developed by **Dr. Martin Porter**. **The Porter algorithm (original) is used as a default algorithm in this library.** If you wish, you can specify to use the newer Porter 2 algorithm (`Algorithm::EnglishPorter2`) or the Lovins algorithm (`Algorithm::EnglishLovins`).
 
 - **Estonian**
 

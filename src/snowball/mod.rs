@@ -8,6 +8,7 @@ pub mod algorithms;
 
 #[derive(Debug, Serialize, Deserialize, Eq, PartialEq, Copy, Clone)]
 pub enum Algorithm {
+    Arabic,
     ArmenianMkrtchyan,
     Basque,
     Catalan,
@@ -50,6 +51,7 @@ impl Stemmer {
     /// Create a new stemmer from an algorithm
     pub fn create(lang: Algorithm) -> Self {
         match lang {
+            Algorithm::Arabic => Stemmer { stemmer: algorithms::arabic::stem },
             Algorithm::ArmenianMkrtchyan => Stemmer { stemmer: algorithms::armenian_mkrtchyan::stem },
             Algorithm::Basque => Stemmer { stemmer: algorithms::basque::stem },
             Algorithm::Catalan => Stemmer { stemmer: algorithms::catalan::stem },
