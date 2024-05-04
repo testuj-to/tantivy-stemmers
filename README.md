@@ -118,6 +118,10 @@ fn main() {
 
   The Hungarian Snowball algorithm was obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/hungarian/stemmer.html).
 
+- **Indonesian**
+
+  The Indonesian Snowball algorithm was developed by **Fadillah Z. Tala** in 2003 and source codes has been obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/indonesian/stemmer.html).
+
 - **Irish (Gaelic)**
 
   The Irish (Gaelic) Snowball algorithm was obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/irish/stemmer.html).
