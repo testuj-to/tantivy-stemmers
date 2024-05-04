@@ -64,6 +64,14 @@ fn main() {
 
 ## Supported algorithms
 
+- **Armenian**
+
+  The Armenian Snowball algorithm was developed by **Astghik Mkrtchyan** and source code has been obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/armenian/stemmer.html).
+
+- **Basque**
+
+  The Basque Snowball algorithm was obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/basque/stemmer.html).
+
 - **Catalan**
 
   The Catalan Snowball algorithm was obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/catalan/stemmer.html).
@@ -77,10 +85,6 @@ fn main() {
   ##### Personal note - apology for our countrymen
 
   While researching the internet for a Czech stemming algorithms, I have found only 2, out of which only 1 with a suitable license - the `Dolamic` algorithm. However, I have found many references to this algorithm - both international and domestic. My blood boiled when I noticed a curious trend: while every single international reference to this algorithm credited the actual author (**Ljiljana Dolamic**), every single domestic reference credited her supervisor (Jacques Savoy) and didn't even bother to mention her. Czech is an especially difficult language even for native speakers, let alone for a foreign researcher, let alone if they're building a liguistics algorithm used by those native speakers to this day (looking at you PostgreSQL and ElasticSearch). Therefore I'd like to apologize for the lack of given damn from my countrymen to the effort this algorithm took from its author - Ljiljana Dolamic.
-
-- **Basque**
-
-  The Basque Snowball algorithm was obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/basque/stemmer.html).
 
 - **Danish**
 
