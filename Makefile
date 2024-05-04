@@ -44,3 +44,4 @@ algorithms:
 	$(call compile_algorithm,russian)
 	$(call compile_algorithm,spanish)
 	$(call compile_algorithm,swedish)
+	$(call compile_algorithm,turkish_cilden)

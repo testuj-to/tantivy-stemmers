@@ -145,3 +145,15 @@ fn main() {
 - **Swedish**
 
   The Swedish Snowball algorithm was obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/swedish/stemmer.html).
+
+- **Turkish**
+
+  The Turkish Snowball algorithm was developed by **Evren (Kapusuz) Çilden** in 2007. The source code has been obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/turkish/stemmer.html).
+
+  ##### Note from the Snowball website
+
+  > The Turkish stemming algorithm was provided by Evren Kapusuz Cilden. It stems only noun and nominal verb suffixes because noun stems are more important for information retrieval, and only handling these simplifies the algorithm significantly.
+
+  > In her paper (linked above) Evren explains
+
+  > The stemmer can be enhanced to stem all kinds of verb suffixes. In Turkish, there are over fifty suffixes that can be affixed to verbs [2]. The morphological structure of verb suffixes is more complicated than noun suffixes. Despite this, one can use the methodology presented in this paper to enhance the stemmer to find stems of all kinds of Turkish words.
