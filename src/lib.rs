@@ -38,6 +38,7 @@ pub enum Algorithm {
     Spanish,
     Swedish,
     TurkishCilden,
+    YiddishUrieli,
 }
 
 impl Algorithm {
@@ -74,6 +75,7 @@ impl Algorithm {
             Spanish => snowball::Algorithm::Spanish,
             Swedish => snowball::Algorithm::Swedish,
             TurkishCilden => snowball::Algorithm::TurkishCilden,
+            YiddishUrieli => snowball::Algorithm::YiddishUrieli,
         }
     }
 }

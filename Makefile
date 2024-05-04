@@ -50,3 +50,4 @@ algorithms:
 	$(call compile_algorithm,spanish)
 	$(call compile_algorithm,swedish)
 	$(call compile_algorithm,turkish_cilden)
+	$(call compile_algorithm,yiddish_urieli)
