@@ -43,6 +43,7 @@ algorithms:
 	$(call compile_algorithm,irish_gaelic)
 	$(call compile_algorithm,italian)
 	$(call compile_algorithm,lithuanian_jocas)
+	$(call compile_algorithm,nepali)
 	$(call compile_algorithm,norwegian_bokmal)
 	$(call compile_algorithm,portuguese)
 	$(call compile_algorithm,romanian_heidelberg)
