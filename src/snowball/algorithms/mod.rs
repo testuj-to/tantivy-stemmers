@@ -11,6 +11,7 @@ pub mod english_porter_2;
 pub mod finnish;
 pub mod french;
 pub mod german;
+pub mod hindi_lightweight;
 pub mod hungarian;
 pub mod irish_gaelic;
 pub mod italian;
