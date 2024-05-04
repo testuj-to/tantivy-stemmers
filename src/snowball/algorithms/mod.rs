@@ -8,6 +8,7 @@ pub mod dutch;
 pub mod english_lovins;
 pub mod english_porter;
 pub mod english_porter_2;
+pub mod estonian_freienthal;
 pub mod finnish;
 pub mod french;
 pub mod german;
