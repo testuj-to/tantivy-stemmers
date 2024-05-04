@@ -110,6 +110,10 @@ fn main() {
 
   The German Snowball algorithm was obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/german/stemmer.html).
 
+- **Greek**
+
+  The Greek Snowball algorithm has been developed by **Georgios Ntais** in 2006 and later enhanced by **Spyridon Saroukos** in 2008. The source code has been obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/greek/stemmer.html).
+
 - **Hindi**
 
   The Hindi (lightweight) Snowball algorithm was developed by **A. Ramanathan** and **D. Rao** in 2003. Its source code has been obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/hindi/stemmer.html).

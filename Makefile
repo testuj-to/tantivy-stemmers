@@ -34,6 +34,7 @@ algorithms:
 	$(call compile_algorithm,finnish)
 	$(call compile_algorithm,french)
 	$(call compile_algorithm,german)
+	$(call compile_algorithm,greek)
 	$(call compile_algorithm,hindi_lightweight)
 	$(call compile_algorithm,hungarian)
 	$(call compile_algorithm,indonesian_tala)
