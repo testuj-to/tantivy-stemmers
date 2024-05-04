@@ -146,6 +146,11 @@ fn main() {
 
   The Lithuanian Snowball algorithm (`LithuanianJocas`) was contributed by Dainius Jocas. Its source code has been obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/lithuanian/stemmer.html).
 
+- **Nepali**
+
+  The Nepali Snowball algorithm (`LithuanianJocas`) was contributed by Dainius Jocas. Its source code has been obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/lithuanian/stemmer.html).
+  The Nepali Snowball algorithm was developed by **Ingroj Shrestha**, **Oleg Bartunov** and **Shreeya Singh**. Its source code has been obtained under the BSD license from the official [Snowball GitHub repository](https://github.com/snowballstem/snowball/blob/master/algorithms/nepali.sbl).
+
 - **Norwegian (Bokmål)**
 
   The Norwegian (Bokmål variant) Snowball algorithm was obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/norwegian/stemmer.html).
