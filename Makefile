@@ -21,6 +21,7 @@ algorithms:
 	rm -rf ./src/snowball/algorithms
 	mkdir ./src/snowball/algorithms
 
+	$(call compile_algorithm,arabic)
 	$(call compile_algorithm,armenian_mkrtchyan)
 	$(call compile_algorithm,basque)
 	$(call compile_algorithm,catalan)
