@@ -134,6 +134,10 @@ fn main() {
 
   The Italian Snowball algorithm was obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/italian/stemmer.html).
 
+- **Lithuanian**
+
+  The Lithuanian Snowball algorithm (`LithuanianJocas`) was contributed by Dainius Jocas. Its source code has been obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/lithuanian/stemmer.html).
+
 - **Norwegian (Bokmål)**
 
   The Norwegian (Bokmål variant) Snowball algorithm was obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/norwegian/stemmer.html).
