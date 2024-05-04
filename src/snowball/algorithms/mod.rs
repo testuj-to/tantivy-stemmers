@@ -13,6 +13,7 @@ pub mod french;
 pub mod german;
 pub mod hindi_lightweight;
 pub mod hungarian;
+pub mod indonesian_tala;
 pub mod irish_gaelic;
 pub mod italian;
 pub mod norwegian_bokmal;
