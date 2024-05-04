@@ -177,3 +177,7 @@ fn main() {
   > In her paper (linked above) Evren explains
 
   > The stemmer can be enhanced to stem all kinds of verb suffixes. In Turkish, there are over fifty suffixes that can be affixed to verbs [2]. The morphological structure of verb suffixes is more complicated than noun suffixes. Despite this, one can use the methodology presented in this paper to enhance the stemmer to find stems of all kinds of Turkish words.
+
+- **Yiddish**
+
+  The Yiddish Snowball algorithm was created by Assaf Urieli in 2020 and obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/yiddish/stemmer.html).
