@@ -31,6 +31,7 @@ pub enum Algorithm {
     Russian,
     Spanish,
     Swedish,
+    TurkishCilden,
 }
 
 /// Wrapps a usable interface around the actual stemmer implementation
@@ -65,6 +66,7 @@ impl Stemmer {
             Algorithm::Russian => Stemmer { stemmer: algorithms::russian::stem },
             Algorithm::Spanish => Stemmer { stemmer: algorithms::spanish::stem },
             Algorithm::Swedish => Stemmer { stemmer: algorithms::swedish::stem },
+            Algorithm::TurkishCilden => Stemmer { stemmer: algorithms::turkish_cilden::stem },
         }
     }
 
