@@ -20,6 +20,7 @@ pub mod indonesian_tala;
 pub mod irish_gaelic;
 pub mod italian;
 pub mod lithuanian_jocas;
+pub mod nepali;
 pub mod norwegian_bokmal;
 pub mod portuguese;
 pub mod romanian_heidelberg;
