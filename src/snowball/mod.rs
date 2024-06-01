@@ -1,7 +1,7 @@
 use std::borrow::Cow;
 
 mod among;
-mod snowball_env;
+mod env;
 
 pub mod algorithms;
 
@@ -19,7 +19,7 @@ impl SnowballStemmer {
     /// Stem a single word
     /// Please note, that the input is expected to be all lowercase (if that is applicable).
     pub fn stem<'a>(&self, input: &'a str) -> Cow<'a, str> {
-        let mut env = snowball_env::SnowballEnv::create(input);
+        let mut env = env::SnowballEnv::create(input);
         (self.algorithm)(&mut env);
         env.get_current()
     }

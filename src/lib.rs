@@ -24,7 +24,7 @@ impl StemmerTokenizer {
     }
 }
 
-#[cfg(feature = "english-porter-2")]
+#[cfg(feature = "english_porter_2")]
 impl Default for StemmerTokenizer {
     /// Creates a new `StemmerTokenizer` [`StemmerTokenizer`] the default algorithm [`algorithms::english_porter_2`].
     fn default() -> Self {
