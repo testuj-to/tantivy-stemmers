@@ -4,7 +4,7 @@ use super::snowball_env::SnowballEnv;
 pub type Algorithm = fn(&mut SnowballEnv) -> bool;
 
 
-// Arabic
+// arabic
 
 #[cfg(feature = "arabic")]
 mod arabic;
@@ -15,7 +15,7 @@ pub fn arabic(env: &mut SnowballEnv) -> bool {
 }
 
 
-// ArmenianMkrtchyan
+// armenian_mkrtchyan
 
 #[cfg(feature = "armenian-mkrtchyan")]
 mod armenian_mkrtchyan;
@@ -26,7 +26,7 @@ pub fn armenian_mkrtchyan(env: &mut SnowballEnv) -> bool {
 }
 
 
-// Basque
+// basque
 
 #[cfg(feature = "basque")]
 mod basque;
@@ -37,7 +37,7 @@ pub fn basque(env: &mut SnowballEnv) -> bool {
 }
 
 
-// Catalan
+// catalan
 
 #[cfg(feature = "catalan")]
 mod catalan;
@@ -48,7 +48,7 @@ pub fn catalan(env: &mut SnowballEnv) -> bool {
 }
 
 
-// CzechDolamicAggressive
+// czech_dolamic_aggressive
 
 #[cfg(feature = "czech-dolamic-aggressive")]
 mod czech_dolamic_aggressive;
@@ -59,7 +59,7 @@ pub fn czech_dolamic_aggressive(env: &mut SnowballEnv) -> bool {
 }
 
 
-// CzechDolamicLight
+// czech_dolamic_light
 
 #[cfg(feature = "czech-dolamic-light")]
 mod czech_dolamic_light;
@@ -70,7 +70,7 @@ pub fn czech_dolamic_light(env: &mut SnowballEnv) -> bool {
 }
 
 
-// Danish
+// danish
 
 #[cfg(feature = "danish")]
 mod danish;
@@ -81,7 +81,7 @@ pub fn danish(env: &mut SnowballEnv) -> bool {
 }
 
 
-// Dutch
+// dutch
 
 #[cfg(feature = "dutch")]
 mod dutch;
@@ -92,7 +92,7 @@ pub fn dutch(env: &mut SnowballEnv) -> bool {
 }
 
 
-// EnglishLovins
+// english_lovins
 
 #[cfg(feature = "english-lovins")]
 mod english_lovins;
@@ -103,7 +103,7 @@ pub fn english_lovins(env: &mut SnowballEnv) -> bool {
 }
 
 
-// EnglishPorter
+// english_porter
 
 #[cfg(feature = "english-porter")]
 mod english_porter;
@@ -114,7 +114,7 @@ pub fn english_porter(env: &mut SnowballEnv) -> bool {
 }
 
 
-// EnglishPorter2
+// english_porter_2
 
 #[cfg(feature = "english-porter-2")]
 mod english_porter_2;
@@ -125,7 +125,7 @@ pub fn english_porter_2(env: &mut SnowballEnv) -> bool {
 }
 
 
-// EstonianFreienthal
+// estonian_freienthal
 
 #[cfg(feature = "estonian-freienthal")]
 mod estonian_freienthal;
@@ -136,7 +136,7 @@ pub fn estonian_freienthal(env: &mut SnowballEnv) -> bool {
 }
 
 
-// Finnish
+// finnish
 
 #[cfg(feature = "finnish")]
 mod finnish;
@@ -147,7 +147,7 @@ pub fn finnish(env: &mut SnowballEnv) -> bool {
 }
 
 
-// French
+// french
 
 #[cfg(feature = "french")]
 mod french;
@@ -158,7 +158,7 @@ pub fn french(env: &mut SnowballEnv) -> bool {
 }
 
 
-// German
+// german
 
 #[cfg(feature = "german")]
 mod german;
@@ -169,7 +169,7 @@ pub fn german(env: &mut SnowballEnv) -> bool {
 }
 
 
-// Greek
+// greek
 
 #[cfg(feature = "greek")]
 mod greek;
@@ -180,7 +180,7 @@ pub fn greek(env: &mut SnowballEnv) -> bool {
 }
 
 
-// HindiLightweight
+// hindi_lightweight
 
 #[cfg(feature = "hindi-lightweight")]
 mod hindi_lightweight;
@@ -191,7 +191,7 @@ pub fn hindi_lightweight(env: &mut SnowballEnv) -> bool {
 }
 
 
-// Hungarian
+// hungarian
 
 #[cfg(feature = "hungarian")]
 mod hungarian;
@@ -202,7 +202,7 @@ pub fn hungarian(env: &mut SnowballEnv) -> bool {
 }
 
 
-// IndonesianTala
+// indonesian_tala
 
 #[cfg(feature = "indonesian-tala")]
 mod indonesian_tala;
@@ -213,7 +213,7 @@ pub fn indonesian_tala(env: &mut SnowballEnv) -> bool {
 }
 
 
-// IrishGaelic
+// irish_gaelic
 
 #[cfg(feature = "irish-gaelic")]
 mod irish_gaelic;
@@ -224,7 +224,7 @@ pub fn irish_gaelic(env: &mut SnowballEnv) -> bool {
 }
 
 
-// Italian
+// italian
 
 #[cfg(feature = "italian")]
 mod italian;
@@ -235,7 +235,7 @@ pub fn italian(env: &mut SnowballEnv) -> bool {
 }
 
 
-// LithuanianJocas
+// lithuanian_jocas
 
 #[cfg(feature = "lithuanian-jocas")]
 mod lithuanian_jocas;
@@ -246,7 +246,7 @@ pub fn lithuanian_jocas(env: &mut SnowballEnv) -> bool {
 }
 
 
-// Nepali
+// nepali
 
 #[cfg(feature = "nepali")]
 mod nepali;
@@ -257,7 +257,7 @@ pub fn nepali(env: &mut SnowballEnv) -> bool {
 }
 
 
-// NorwegianBokmal
+// norwegian_bokmal
 
 #[cfg(feature = "norwegian-bokmal")]
 mod norwegian_bokmal;
@@ -268,7 +268,7 @@ pub fn norwegian_bokmal(env: &mut SnowballEnv) -> bool {
 }
 
 
-// Portuguese
+// portuguese
 
 #[cfg(feature = "portuguese")]
 mod portuguese;
@@ -279,7 +279,7 @@ pub fn portuguese(env: &mut SnowballEnv) -> bool {
 }
 
 
-// RomanianHeidelberg
+// romanian_heidelberg
 
 #[cfg(feature = "romanian-heidelberg")]
 mod romanian_heidelberg;
@@ -290,7 +290,7 @@ pub fn romanian_heidelberg(env: &mut SnowballEnv) -> bool {
 }
 
 
-// RomanianTirdea
+// romanian_tirdea
 
 #[cfg(feature = "romanian-tirdea")]
 mod romanian_tirdea;
@@ -301,7 +301,7 @@ pub fn romanian_tirdea(env: &mut SnowballEnv) -> bool {
 }
 
 
-// Romanian
+// romanian
 
 #[cfg(feature = "romanian")]
 mod romanian;
@@ -312,7 +312,7 @@ pub fn romanian(env: &mut SnowballEnv) -> bool {
 }
 
 
-// Russian
+// russian
 
 #[cfg(feature = "russian")]
 mod russian;
@@ -323,7 +323,7 @@ pub fn russian(env: &mut SnowballEnv) -> bool {
 }
 
 
-// Spanish
+// spanish
 
 #[cfg(feature = "spanish")]
 mod spanish;
@@ -334,7 +334,7 @@ pub fn spanish(env: &mut SnowballEnv) -> bool {
 }
 
 
-// Swedish
+// swedish
 
 #[cfg(feature = "swedish")]
 mod swedish;
@@ -345,7 +345,7 @@ pub fn swedish(env: &mut SnowballEnv) -> bool {
 }
 
 
-// TurkishCilden
+// turkish_cilden
 
 #[cfg(feature = "turkish-cilden")]
 mod turkish_cilden;
@@ -356,7 +356,7 @@ pub fn turkish_cilden(env: &mut SnowballEnv) -> bool {
 }
 
 
-// YiddishUrieli
+// yiddish_urieli
 
 #[cfg(feature = "yiddish-urieli")]
 mod yiddish_urieli;
