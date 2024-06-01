@@ -1,18 +1,31 @@
 
 # Tantivy stemmers (tokenizer)
 
-This library bundles several OSS to provide a collection of stemming algorithms for various languages as a Tantivy tokenizer. [Tantivy](https://github.com/quickwit-oss/tantivy) is a full-text search engine library written in Rust. As its default `Stemmer` tokenizer depends on a dead library `rust-stemmers`, there are only a very few languages available by default. Nevertheless, Tantivy provides an easy way to build our own custom tokenizers (see the [tantivy-tokenizer-api](https://crates.io/crates/tantivy-tokenizer-api) for details).
+This library bundles several OSS to provide a collection of stemming algorithms for various languages as a Tantivy tokenizer. [Tantivy](https://github.com/quickwit-oss/tantivy) is a full-text search engine library written in Rust. As its default `Stemmer` tokenizer depends on a less then alive library `rust-stemmers`, there are only a very few languages available by default. Nevertheless, Tantivy provides an easy way to build our own custom tokenizers (see the [tantivy-tokenizer-api](https://crates.io/crates/tantivy-tokenizer-api) for details).
 
-This library is a compilation of several OSS projects into 1 library:
-- [`rust-stemmers`](https://github.com/CurrySoftware/rust-stemmers)
+This library compiles several OSS projects into 1 library:
+- [`snowballstem/snowball`](https://github.com/snowballstem/snowball)
 
-  Library `rust-stemmers` (used by Tantivy under the hood) implements a Rust interface for a Snowball algorithms of several languages. This library is inspired by `rust-stemmers` and some source code is taken directly from `rust-stemmers` (namely `src/snowball/*`).
+  All the raw algorithms in this library are written in the [Snowball](https://snowballstem.org) language, then complied into a Rust code using the Snowball compiler - all these generated algorithms are located at `src/snowball/algorithms/*`. A Snowball *environment* is then needed to execute the generated algorithm. This environment is comprised of files `src/snowball/among.rs` and `src/snowball/env.rs` - both files have been provided (ie. copied) from the official Snowball repository: [`rust/src/snowball`](https://github.com/snowballstem/snowball/tree/master/rust).
 - [`Tantivy`](https://github.com/quickwit-oss/tantivy)
 
-  Implementation of the `Stemmer` in this library is pretty much a copy of the original implementation of the [`Stemmer` tokenizer](https://github.com/quickwit-oss/tantivy/blob/main/src/tokenizer/stemmer.rs) in the Tantivy library. Only this lib does not depend on the `rust-stemmers` package and instead includes various algorithms in it self. And instead of importing from the `tantivy` lib, this library imports from `tantivy-tokenizer-api`.
+  Implementation of the `Stemmer` in this library is more or less a copy of the original implementation of the [`Stemmer` tokenizer](https://github.com/quickwit-oss/tantivy/blob/main/src/tokenizer/stemmer.rs) in the Tantivy library. Only this lib does not depend on the `rust-stemmers` package and instead includes various algorithms in it self. And instead of importing from the `tantivy` lib, this library imports from `tantivy-tokenizer-api`.
 - **Algorithms**
 
-  Most, if not all, stemming algorithms are obtained from the official [Snowball website](https://snowballstem.org/) and compiled using the Snowball compiler into Rust. More information about individual algorithm licenses are noted below - most are published under the BSD license.
+  Most, if not all, stemming algorithms are obtained from the official [Snowball website](https://snowballstem.org) and compiled using the Snowball compiler into Rust. More information about individual algorithm licenses are noted below - most are published under the BSD license.
+
+## Cargo features
+
+As this library bundles many algorithms and contains lots of generated code, it would be nice not to have to include it all in our final build. For this reason, each algorithm is published as a Cargo feature. In order to use a specific algorithm, you have to install the appropriate feature first. If you want to use, say, the Dolamic algorithm for Czech in the aggressive variant, your `Cargo.toml` should look like this:
+
+```toml
+# ...
+[dependencies]
+tantivy-stemmers = { version = "0.3.0", features = ["default", "czech_dolamic_aggressive"] }
+# ...
+```
+
+**See the features table under [Supported algorithms](#supported-algorithms) below.**
 
 ## Usage
 
@@ -40,19 +53,20 @@ fn main() {
     let schema = schema_builder.build();
     let index = Index::create_in_ram(schema.clone());
 
-    // Create an instance of the Stemmer
+    // Create an instance of the StemmerTokenizer
 
-    // With default algorithm (default algorithm is EnglishPorter)
-    // let stemmer = tantivy_stemmers::Stemmer::default();
+    // With default algorithm (default algorithm is [`tantivy_stemmers::algorithms::english_porter_2`])
+    // let stemmer = tantivy_stemmers::StemmerTokenizer::default();
 
     // With a specific algorithm
     let stemmer = tantivy_stemmers::Stemmer::new(
-        tantivy_stemmers::Algorithm::CzechDolamicAggressive,
+        tantivy_stemmers::algorithms::czech_dolamic_aggressive,
     );
 
     // Before we register it, we need to wrap it in an instance
-    // of the TextAnalyzer tokenizer. We also have to transform
-    // the text to lowercase since our stemmer expects lowercase.
+    // of the TextAnalyzer tokenizer.
+    // ❗️ We also have to transform the text to lowercase since
+    // the stemmer expects lowercase.
     let tokenizer = TextAnalyzer::builder(
         stemmer.transform(LowerCaser.transform(SimpleTokenizer::default())),
     ).build();
@@ -63,6 +77,47 @@ fn main() {
 ```
 
 ## Supported algorithms
+
+### List of available Cargo features
+
+|Feature|Language|
+|-|-|
+|||
+|`arabic`|Arabic|
+|`armenian_mkrtchyan`|Armenian|
+|`basque`|Basque|
+|`catalan`|Catalan|
+|`czech_dolamic_aggressive`|Czech|
+|`czech_dolamic_light`|Czech|
+|`danish`|Danish|
+|`dutch`|Dutch|
+|`english_lovins`|English|
+|`english_porter`|English|
+|`english_porter_2` ***(default)***|English|
+|`estonian_freienthal`|Estonian|
+|`finnish`|Finnish|
+|`french`|French|
+|`german`|German|
+|`greek`|Greek|
+|`hindi_lightweight`|Hindi|
+|`hungarian`|Hungarian|
+|`indonesian_tala`|Indonesian|
+|`irish_gaelic`|Irish|
+|`italian`|Italian|
+|`lithuanian_jocas`|Lithuanian|
+|`nepali`|Nepali|
+|`norwegian_bokmal`|Norwegian|
+|`portuguese`|Portuguese|
+|`romanian_heidelberg`|Romanian|
+|`romanian_tirdea`|Romanian|
+|`romanian`|Romanian|
+|`russian`|Russian|
+|`spanish`|Spanish|
+|`swedish`|Swedish|
+|`turkish_cilden`|Turkish|
+|`yiddish_urieli`|Yiddish|
+
+### Notes on individual algorithms and their sources
 
 - **Arabic**
 
@@ -85,10 +140,6 @@ fn main() {
   Currently only a single algorithm (in an `aggressive` and `light` variants) is available: `Dolamic`. This algorithm has been developed by **Ljiljana Dolamic** & Jacques Savoy and published under the BSD license. It's written in the [Snowball language](https://snowballstem.org/) and is available on the [Snowball website](https://snowballstem.org/algorithms/czech/stemmer.html).
 
   *There is 1 more stemming algorithm for the Czech language: `Hellebrand`. This algorithm has been developed by **David Hellebrand** & Petr Chmelař. It's also written in the Snowball language and is available as a [Master's thesis here](https://www.fit.vut.cz/research/product/133). However, this algorithm has been published under the GNU license and **is therefore not included in this library as we'd like to keep the BSD license** on this library. (If you wish, you can always compile the `Hellebrand` algorithm from Snowball to Rust and include it yourself.)*
-
-  ##### Personal note - apology for our countrymen
-
-  While researching the internet for a Czech stemming algorithms, I have found only 2, out of which only 1 with a suitable license - the `Dolamic` algorithm. However, I have found many references to this algorithm - both international and domestic. My blood boiled when I noticed a curious trend: while every single international reference to this algorithm credited the actual author (**Ljiljana Dolamic**), every single domestic reference credited her supervisor (Jacques Savoy) and didn't even bother to mention her. Czech is an especially difficult language even for native speakers, let alone for a foreign researcher, let alone if they're building a liguistics algorithm used by those native speakers to this day (looking at you PostgreSQL and ElasticSearch). Therefore I'd like to apologize for the lack of given damn from my countrymen to the effort this algorithm took from its author - Ljiljana Dolamic.
 
 - **Danish**
 

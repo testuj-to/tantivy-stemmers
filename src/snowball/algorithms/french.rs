@@ -5,7 +5,7 @@
 #![allow(unused_mut)]
 #![allow(unused_parens)]
 #![allow(unused_variables)]
-use super::super::snowball_env::SnowballEnv;
+use super::super::env::SnowballEnv;
 use super::super::among::Among;
 
 static A_0: &'static [Among<Context>; 3] = &[
