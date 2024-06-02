@@ -14,7 +14,7 @@ define compile_algorithm
 	echo "#[cfg(feature = \"$(1)\")]\npub fn $(1)(env: &mut SnowballEnv) -> bool {\n    return $(1)::stem(env);\n}\n" >> ./src/snowball/algorithms/mod.rs
 endef
 
-.PHONY: default algorithms
+.PHONY: default algorithms test test-with-print
 
 default:
 
@@ -57,3 +57,9 @@ algorithms:
 	$(call compile_algorithm,swedish)
 	$(call compile_algorithm,turkish_cilden)
 	$(call compile_algorithm,yiddish_urieli)
+
+test:
+	cargo test --all-features
+
+test-with-print:
+	cargo test --all-features -- --nocapture

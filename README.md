@@ -33,6 +33,7 @@ tantivy-stemmers = { version = "0.3.0", features = ["default", "czech_dolamic_ag
 use tantivy::Index;
 use tantivy::schema::{Schema, TextFieldIndexing, TextOptions, IndexRecordOption};
 use tantivy::tokenizer::{LowerCaser, SimpleTokenizer, TextAnalyzer};
+use tantivy_tokenizer_api::TokenFilter;
 use tantivy_stemmers;
 
 fn main() {
@@ -59,7 +60,7 @@ fn main() {
     // let stemmer = tantivy_stemmers::StemmerTokenizer::default();
 
     // With a specific algorithm
-    let stemmer = tantivy_stemmers::Stemmer::new(
+    let stemmer = tantivy_stemmers::StemmerTokenizer::new(
         tantivy_stemmers::algorithms::czech_dolamic_aggressive,
     );
 
