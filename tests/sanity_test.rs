@@ -2,23 +2,10 @@
 #[cfg(test)]
 mod tests {
     use tantivy::tokenizer::{LowerCaser, SimpleTokenizer, TextAnalyzer};
-    use tantivy_tokenizer_api::{BoxTokenStream, TokenFilter};
+    use tantivy_tokenizer_api::TokenFilter;
+
     use tantivy_stemmers;
-
-    fn reduce_token_stream_to_string(token_stream: &mut BoxTokenStream) -> String {
-        let mut tokens: Vec<String> = Vec::new();
-
-        loop {
-            match token_stream.next() {
-                Some(token) => {
-                    tokens.push(token.text.clone());
-                },
-                None => break,
-            }
-        }
-
-        return tokens.join(" ");
-    }
+    use test_utils;
 
     #[test]
     fn it_creates_default_stemmer() {
@@ -29,9 +16,10 @@ mod tests {
 
         let mut token_stream = tokenizer.token_stream("HOW inSAnElY qUEsTiOnaBLE");
 
-        let result = reduce_token_stream_to_string(&mut token_stream);
-
-        assert_eq!(result, "how insan question");
+        assert_eq!(
+            test_utils::reduce_token_stream_to_string(&mut token_stream),
+            "how insan question",
+        );
     }
 
     #[test]
@@ -45,8 +33,9 @@ mod tests {
 
         let mut token_stream = tokenizer.token_stream("Bez dlouhé prodlevy");
 
-        let result = reduce_token_stream_to_string(&mut token_stream);
-
-        assert_eq!(result, "bez dlouh prodlev");
+        assert_eq!(
+            test_utils::reduce_token_stream_to_string(&mut token_stream),
+            "bez dlouh prodlev",
+        );
     }
 }
