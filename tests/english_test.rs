@@ -38,7 +38,9 @@ mod tests {
 
     #[test]
     fn it_stems_using_porter_2() {
-        let stemmer = tantivy_stemmers::StemmerTokenizer::default();
+        let stemmer = tantivy_stemmers::StemmerTokenizer::new(
+            tantivy_stemmers::algorithms::english_porter_2,
+        );
 
         let chain = stemmer.transform(LowerCaser.transform(SimpleTokenizer::default()));
         let mut tokenizer = TextAnalyzer::builder(chain).build();

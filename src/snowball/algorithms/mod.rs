@@ -1,7 +1,4 @@
-
 use super::env::SnowballEnv;
-
-pub type Algorithm = fn(&mut SnowballEnv) -> bool;
 
 
 // arabic
@@ -11,7 +8,7 @@ mod arabic;
 
 #[cfg(feature = "arabic")]
 pub fn arabic(env: &mut SnowballEnv) -> bool {
-    return arabic::stem(env);
+    arabic::stem(env)
 }
 
 
@@ -22,7 +19,7 @@ mod armenian_mkrtchyan;
 
 #[cfg(feature = "armenian_mkrtchyan")]
 pub fn armenian_mkrtchyan(env: &mut SnowballEnv) -> bool {
-    return armenian_mkrtchyan::stem(env);
+    armenian_mkrtchyan::stem(env)
 }
 
 
@@ -33,7 +30,7 @@ mod basque;
 
 #[cfg(feature = "basque")]
 pub fn basque(env: &mut SnowballEnv) -> bool {
-    return basque::stem(env);
+    basque::stem(env)
 }
 
 
@@ -44,7 +41,7 @@ mod catalan;
 
 #[cfg(feature = "catalan")]
 pub fn catalan(env: &mut SnowballEnv) -> bool {
-    return catalan::stem(env);
+    catalan::stem(env)
 }
 
 
@@ -55,7 +52,7 @@ mod czech_dolamic_aggressive;
 
 #[cfg(feature = "czech_dolamic_aggressive")]
 pub fn czech_dolamic_aggressive(env: &mut SnowballEnv) -> bool {
-    return czech_dolamic_aggressive::stem(env);
+    czech_dolamic_aggressive::stem(env)
 }
 
 
@@ -66,7 +63,7 @@ mod czech_dolamic_light;
 
 #[cfg(feature = "czech_dolamic_light")]
 pub fn czech_dolamic_light(env: &mut SnowballEnv) -> bool {
-    return czech_dolamic_light::stem(env);
+    czech_dolamic_light::stem(env)
 }
 
 
@@ -77,7 +74,7 @@ mod danish;
 
 #[cfg(feature = "danish")]
 pub fn danish(env: &mut SnowballEnv) -> bool {
-    return danish::stem(env);
+    danish::stem(env)
 }
 
 
@@ -88,7 +85,7 @@ mod dutch;
 
 #[cfg(feature = "dutch")]
 pub fn dutch(env: &mut SnowballEnv) -> bool {
-    return dutch::stem(env);
+    dutch::stem(env)
 }
 
 
@@ -99,7 +96,7 @@ mod english_lovins;
 
 #[cfg(feature = "english_lovins")]
 pub fn english_lovins(env: &mut SnowballEnv) -> bool {
-    return english_lovins::stem(env);
+    english_lovins::stem(env)
 }
 
 
@@ -110,7 +107,7 @@ mod english_porter;
 
 #[cfg(feature = "english_porter")]
 pub fn english_porter(env: &mut SnowballEnv) -> bool {
-    return english_porter::stem(env);
+    english_porter::stem(env)
 }
 
 
@@ -121,7 +118,7 @@ mod english_porter_2;
 
 #[cfg(feature = "english_porter_2")]
 pub fn english_porter_2(env: &mut SnowballEnv) -> bool {
-    return english_porter_2::stem(env);
+    english_porter_2::stem(env)
 }
 
 
@@ -132,7 +129,7 @@ mod estonian_freienthal;
 
 #[cfg(feature = "estonian_freienthal")]
 pub fn estonian_freienthal(env: &mut SnowballEnv) -> bool {
-    return estonian_freienthal::stem(env);
+    estonian_freienthal::stem(env)
 }
 
 
@@ -143,7 +140,7 @@ mod finnish;
 
 #[cfg(feature = "finnish")]
 pub fn finnish(env: &mut SnowballEnv) -> bool {
-    return finnish::stem(env);
+    finnish::stem(env)
 }
 
 
@@ -154,7 +151,7 @@ mod french;
 
 #[cfg(feature = "french")]
 pub fn french(env: &mut SnowballEnv) -> bool {
-    return french::stem(env);
+    french::stem(env)
 }
 
 
@@ -165,7 +162,7 @@ mod german;
 
 #[cfg(feature = "german")]
 pub fn german(env: &mut SnowballEnv) -> bool {
-    return german::stem(env);
+    german::stem(env)
 }
 
 
@@ -176,7 +173,7 @@ mod greek;
 
 #[cfg(feature = "greek")]
 pub fn greek(env: &mut SnowballEnv) -> bool {
-    return greek::stem(env);
+    greek::stem(env)
 }
 
 
@@ -187,7 +184,7 @@ mod hindi_lightweight;
 
 #[cfg(feature = "hindi_lightweight")]
 pub fn hindi_lightweight(env: &mut SnowballEnv) -> bool {
-    return hindi_lightweight::stem(env);
+    hindi_lightweight::stem(env)
 }
 
 
@@ -198,7 +195,7 @@ mod hungarian;
 
 #[cfg(feature = "hungarian")]
 pub fn hungarian(env: &mut SnowballEnv) -> bool {
-    return hungarian::stem(env);
+    hungarian::stem(env)
 }
 
 
@@ -209,7 +206,7 @@ mod indonesian_tala;
 
 #[cfg(feature = "indonesian_tala")]
 pub fn indonesian_tala(env: &mut SnowballEnv) -> bool {
-    return indonesian_tala::stem(env);
+    indonesian_tala::stem(env)
 }
 
 
@@ -220,7 +217,7 @@ mod irish_gaelic;
 
 #[cfg(feature = "irish_gaelic")]
 pub fn irish_gaelic(env: &mut SnowballEnv) -> bool {
-    return irish_gaelic::stem(env);
+    irish_gaelic::stem(env)
 }
 
 
@@ -231,7 +228,7 @@ mod italian;
 
 #[cfg(feature = "italian")]
 pub fn italian(env: &mut SnowballEnv) -> bool {
-    return italian::stem(env);
+    italian::stem(env)
 }
 
 
@@ -242,7 +239,7 @@ mod lithuanian_jocas;
 
 #[cfg(feature = "lithuanian_jocas")]
 pub fn lithuanian_jocas(env: &mut SnowballEnv) -> bool {
-    return lithuanian_jocas::stem(env);
+    lithuanian_jocas::stem(env)
 }
 
 
@@ -253,7 +250,7 @@ mod nepali;
 
 #[cfg(feature = "nepali")]
 pub fn nepali(env: &mut SnowballEnv) -> bool {
-    return nepali::stem(env);
+    nepali::stem(env)
 }
 
 
@@ -264,7 +261,7 @@ mod norwegian_bokmal;
 
 #[cfg(feature = "norwegian_bokmal")]
 pub fn norwegian_bokmal(env: &mut SnowballEnv) -> bool {
-    return norwegian_bokmal::stem(env);
+    norwegian_bokmal::stem(env)
 }
 
 
@@ -275,7 +272,7 @@ mod portuguese;
 
 #[cfg(feature = "portuguese")]
 pub fn portuguese(env: &mut SnowballEnv) -> bool {
-    return portuguese::stem(env);
+    portuguese::stem(env)
 }
 
 
@@ -286,7 +283,7 @@ mod romanian_heidelberg;
 
 #[cfg(feature = "romanian_heidelberg")]
 pub fn romanian_heidelberg(env: &mut SnowballEnv) -> bool {
-    return romanian_heidelberg::stem(env);
+    romanian_heidelberg::stem(env)
 }
 
 
@@ -297,7 +294,7 @@ mod romanian_tirdea;
 
 #[cfg(feature = "romanian_tirdea")]
 pub fn romanian_tirdea(env: &mut SnowballEnv) -> bool {
-    return romanian_tirdea::stem(env);
+    romanian_tirdea::stem(env)
 }
 
 
@@ -308,7 +305,7 @@ mod romanian;
 
 #[cfg(feature = "romanian")]
 pub fn romanian(env: &mut SnowballEnv) -> bool {
-    return romanian::stem(env);
+    romanian::stem(env)
 }
 
 
@@ -319,7 +316,7 @@ mod russian;
 
 #[cfg(feature = "russian")]
 pub fn russian(env: &mut SnowballEnv) -> bool {
-    return russian::stem(env);
+    russian::stem(env)
 }
 
 
@@ -330,7 +327,7 @@ mod spanish;
 
 #[cfg(feature = "spanish")]
 pub fn spanish(env: &mut SnowballEnv) -> bool {
-    return spanish::stem(env);
+    spanish::stem(env)
 }
 
 
@@ -341,7 +338,7 @@ mod swedish;
 
 #[cfg(feature = "swedish")]
 pub fn swedish(env: &mut SnowballEnv) -> bool {
-    return swedish::stem(env);
+    swedish::stem(env)
 }
 
 
@@ -352,7 +349,7 @@ mod turkish_cilden;
 
 #[cfg(feature = "turkish_cilden")]
 pub fn turkish_cilden(env: &mut SnowballEnv) -> bool {
-    return turkish_cilden::stem(env);
+    turkish_cilden::stem(env)
 }
 
 
@@ -363,6 +360,6 @@ mod yiddish_urieli;
 
 #[cfg(feature = "yiddish_urieli")]
 pub fn yiddish_urieli(env: &mut SnowballEnv) -> bool {
-    return yiddish_urieli::stem(env);
+    yiddish_urieli::stem(env)
 }
 
