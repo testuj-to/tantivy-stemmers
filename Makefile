@@ -11,7 +11,7 @@ define compile_algorithm
 	fi
 
 	echo "\n// $(1)\n\n#[cfg(feature = \"$(1)\")]\nmod $(1);\n" >> ./src/snowball/algorithms/mod.rs
-	echo "#[cfg(feature = \"$(1)\")]\npub fn $(1)(env: &mut SnowballEnv) -> bool {\n    return $(1)::stem(env);\n}\n" >> ./src/snowball/algorithms/mod.rs
+	echo "#[cfg(feature = \"$(1)\")]\npub fn $(1)(env: &mut SnowballEnv) -> bool {\n    $(1)::stem(env)\n}\n" >> ./src/snowball/algorithms/mod.rs
 endef
 
 .PHONY: default algorithms test test-with-print
@@ -22,7 +22,7 @@ algorithms:
 	rm -rf ./src/snowball/algorithms
 	mkdir ./src/snowball/algorithms
 
-	echo "\nuse super::env::SnowballEnv;\n\npub type Algorithm = fn(&mut SnowballEnv) -> bool;\n" >> ./src/snowball/algorithms/mod.rs
+	echo "use super::env::SnowballEnv;\n" >> ./src/snowball/algorithms/mod.rs
 
 	$(call compile_algorithm,arabic)
 	$(call compile_algorithm,armenian_mkrtchyan)

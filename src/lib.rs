@@ -4,7 +4,7 @@ use tantivy_tokenizer_api::{Token, TokenFilter, TokenStream, Tokenizer};
 
 mod snowball;
 
-pub use snowball::algorithms;
+pub mod algorithms;
 
 /// Stemmer tokenizer. Several algorithms are supported, see [`algorithms`] or
 /// https://crates.io/crates/tantivy-stemmers for a list of all available algorithms.
@@ -18,9 +18,7 @@ pub struct StemmerTokenizer {
 impl StemmerTokenizer {
     /// Creates a new `StemmerTokenizer` [`StemmerTokenizer`] for a given language or variant algorithm.
     pub fn new(algorithm: algorithms::Algorithm) -> StemmerTokenizer {
-        StemmerTokenizer {
-            algorithm: algorithm,
-        }
+        StemmerTokenizer { algorithm }
     }
 }
 
@@ -56,7 +54,7 @@ impl<T: Tokenizer> Tokenizer for StemmerFilter<T> {
         StemmerTokenStream {
             tail: self.inner.token_stream(text),
             buffer: String::new(),
-            stemmer: snowball::SnowballStemmer::create(self.algorithm),
+            algorithm: self.algorithm,
         }
     }
 }
@@ -64,7 +62,7 @@ impl<T: Tokenizer> Tokenizer for StemmerFilter<T> {
 pub struct StemmerTokenStream<T> {
     tail: T,
     buffer: String,
-    stemmer: snowball::SnowballStemmer,
+    algorithm: algorithms::Algorithm,
 }
 
 impl<T: TokenStream> TokenStream for StemmerTokenStream<T> {
@@ -75,7 +73,7 @@ impl<T: TokenStream> TokenStream for StemmerTokenStream<T> {
 
         let token = self.tail.token_mut();
 
-        match self.stemmer.stem(&token.text) {
+        match (self.algorithm)(&token.text) {
             Cow::Owned(stemmed_str) => token.text = stemmed_str,
             Cow::Borrowed(stemmed_str) => {
                 self.buffer.clear();
