@@ -81,42 +81,43 @@ fn main() {
 
 ### List of available Cargo features
 
-|Feature|Language|
-|-|-|
-|||
-|`arabic`|Arabic|
-|`armenian_mkrtchyan`|Armenian|
-|`basque`|Basque|
-|`catalan`|Catalan|
-|`czech_dolamic_aggressive`|Czech|
-|`czech_dolamic_light`|Czech|
-|`danish`|Danish|
-|`dutch`|Dutch|
-|`english_lovins`|English|
-|`english_porter`|English|
-|`english_porter_2` ***(default)***|English|
-|`estonian_freienthal`|Estonian|
-|`finnish`|Finnish|
-|`french`|French|
-|`german`|German|
-|`greek`|Greek|
-|`hindi_lightweight`|Hindi|
-|`hungarian`|Hungarian|
-|`indonesian_tala`|Indonesian|
-|`irish_gaelic`|Irish|
-|`italian`|Italian|
-|`lithuanian_jocas`|Lithuanian|
-|`nepali`|Nepali|
-|`norwegian_bokmal`|Norwegian|
-|`portuguese`|Portuguese|
-|`romanian_heidelberg`|Romanian|
-|`romanian_tirdea`|Romanian|
-|`romanian`|Romanian|
-|`russian`|Russian|
-|`spanish`|Spanish|
-|`swedish`|Swedish|
-|`turkish_cilden`|Turkish|
-|`yiddish_urieli`|Yiddish|
+|Feature|Default|Language|Notes|
+|-|-|-|
+|`arabic`|-|Arabic||
+|`armenian_mkrtchyan`|-|Armenian||
+|`basque`|-|Basque||
+|`catalan`|-|Catalan||
+|`czech_dolamic_aggressive`|-|Czech||
+|`czech_dolamic_light`|-|Czech||
+|`danish`|-|Danish||
+|`dutch`|-|Dutch||
+|`english_lovins`|-|English||
+|`english_porter`|-|English|*Porter* has been deprecated in favour of *Porter 2*|
+|`english_porter_2`|__*👈👈 this*__|English||
+|`estonian_freienthal`|-|Estonian||
+|`finnish`|-|Finnish||
+|`french`|-|French||
+|`german`|-|German||
+|`greek`|-|Greek||
+|`hindi_lightweight`|-|Hindi||
+|`hungarian`|-|Hungarian||
+|`indonesian_tala`|-|Indonesian||
+|`irish_gaelic`|-|Irish||
+|`italian`|-|Italian||
+|`lithuanian_jocas`|-|Lithuanian||
+|`nepali`|-|Nepali||
+|`norwegian_bokmal`|-|Norwegian||
+|`polish_yarovoy`|-|Polish|Non-Snowball alg.|
+|`polish_yarovoy_unaccented`|-|Polish|Non-Snowball alg.; besides stemming, this alg. also removes accents|
+|`portuguese`|-|Portuguese||
+|`romanian_heidelberg`|-|Romanian||
+|`romanian_tirdea`|-|Romanian||
+|`romanian`|-|Romanian||
+|`russian`|-|Russian||
+|`spanish`|-|Spanish||
+|`swedish`|-|Swedish||
+|`turkish_cilden`|-|Turkish||
+|`yiddish_urieli`|-|Yiddish||
 
 ### Notes on individual algorithms and their sources
 
@@ -206,6 +207,13 @@ fn main() {
 - **Norwegian (Bokmål)**
 
   The Norwegian (Bokmål variant) Snowball algorithm was obtained under the BSD license from the official [Snowball website](https://snowballstem.org/algorithms/norwegian/stemmer.html).
+
+- **Polish**
+
+  While there are a few distinct stemming algorithms for the Polish language, there's not a single Polish (OSS) stemming algorithm implemented in the Snowball language. Namely, the most popular stemming algorithm [Stempel](http://www.getopt.org/stempel) is implemented in Java. There are also its ports to [Python](https://github.com/dzieciou/pystempel) and [Go](https://github.com/blevesearch/stempel).
+
+  There is 1 Polish stemming algorithm with 2 variants in this library: `polish_yarovoy` and `polish_yarovoy_unaccented`. It has been ported to Rust from a [Go implementation](https://github.com/nickspring/simple_polish_stemmer) by **Nikolay Yarovoy**, which in turn was inspired by [Python implementation](https://github.com/Tutanchamon/pl_stemmer) by **Błażej Kubiński**.<br>
+  There are 2 variants of this algorithm: `polish_yarovoy` stems Polish words and leaves accents as are, while the `polish_yarovoy_unaccented` stems Polish words and also removes all the accents.
 
 - **Portuguese**
 
