@@ -19,10 +19,10 @@ use aho_corasick::AhoCorasick;
 
 struct Rule {
     min_word_len: usize,
-	left_shift: usize,
-	right_shift: usize,
-	suffixes_accented: &'static [&'static str],
-	suffixes_unaccented: &'static [&'static str],
+    left_shift: usize,
+    right_shift: usize,
+    suffixes_accented: &'static [&'static str],
+    suffixes_unaccented: &'static [&'static str],
 }
 
 const RULES: &'static [Rule] = &[
