@@ -4,6 +4,21 @@ use super::snowball;
 
 pub type Algorithm = fn(&str) -> Cow<str>;
 
+// Non-Snowball algorithms
+
+#[cfg(any(feature = "polish_yarovoy", feature = "polish_yarovoy_unaccented"))]
+mod polish_yarovoy;
+
+#[cfg(feature = "polish_yarovoy")]
+pub fn polish_yarovoy<'a>(input: &'a str) -> Cow<'a, str> {
+    polish_yarovoy::stem(input, false)
+}
+
+#[cfg(feature = "polish_yarovoy_unaccented")]
+pub fn polish_yarovoy_unaccented<'a>(input: &'a str) -> Cow<'a, str> {
+    polish_yarovoy::stem(input, true)
+}
+
 // Snowball algorithms
 
 fn stem_with_snowball<'a>(stem: fn(&mut snowball::env::SnowballEnv) -> bool, input: &'a str) -> Cow<'a, str> {
