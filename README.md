@@ -82,7 +82,7 @@ fn main() {
 ### List of available Cargo features
 
 |Feature|Default|Language|Notes|
-|-|-|-|
+|-|-|-|-|
 |`arabic`|-|Arabic||
 |`armenian_mkrtchyan`|-|Armenian||
 |`basque`|-|Basque||
@@ -93,7 +93,7 @@ fn main() {
 |`dutch`|-|Dutch||
 |`english_lovins`|-|English||
 |`english_porter`|-|English|*Porter* has been deprecated in favour of *Porter 2*|
-|`english_porter_2`|__*👈👈 this*__|English||
+|`english_porter_2`|__*👈&nbsp;this*__|English||
 |`estonian_freienthal`|-|Estonian||
 |`finnish`|-|Finnish||
 |`french`|-|French||
